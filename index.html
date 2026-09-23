@@ -1,0 +1,1009 @@
+```html
+<!DOCTYPE html>
+<html lang="sw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rey Soon Saluni</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff8fb;
+            color: #333;
+        }
+
+        /* HEADER */
+        header {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        header h1 {
+            font-size: 35px;
+            color: #ff5c9a;
+        }
+
+        header p {
+            margin-top: 8px;
+        }
+
+        /* NAVIGATION */
+        nav {
+            background: #d63384;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #222;
+        }
+
+        /* HOME */
+        .home {
+            min-height: 600px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            background:
+                linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+                url("Hair Style.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            color: white;
+            padding: 40px;
+        }
+
+        .home-content {
+            max-width: 750px;
+        }
+
+        .home h2 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .home h2 span {
+            color: #ff5c9a;
+        }
+
+        .home p {
+            font-size: 20px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .button {
+            display: inline-block;
+
+            background: #ff4081;
+            color: white;
+
+            padding: 14px 28px;
+
+            text-decoration: none;
+
+            border-radius: 30px;
+
+            margin: 5px;
+
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #d92f69;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #d63384;
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .section-text {
+            margin-bottom: 35px;
+            color: #777;
+        }
+
+        /* ABOUT */
+        .about {
+            background: white;
+        }
+
+        .about p {
+            max-width: 850px;
+            margin: auto;
+
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* SERVICES */
+        .services-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .service {
+            background: white;
+
+            width: 260px;
+
+            padding: 25px;
+
+            border-radius: 15px;
+
+            box-shadow: 0 5px 20px rgba(0,0,0,.12);
+
+            transition: .3s;
+        }
+
+        .service:hover {
+            transform: translateY(-8px);
+        }
+
+        .service h3 {
+            color: #d63384;
+            margin-bottom: 12px;
+        }
+
+        .price {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* GALLERY */
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .gallery-item {
+            width: 280px;
+
+            background: white;
+
+            padding: 10px;
+
+            border-radius: 15px;
+
+            box-shadow: 0 5px 20px rgba(0,0,0,.12);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 270px;
+
+            object-fit: cover;
+
+            border-radius: 10px;
+        }
+
+        .gallery-item h3 {
+            margin-top: 12px;
+            color: #d63384;
+        }
+
+        /* WHY US */
+        .why {
+            background: #111;
+            color: white;
+        }
+
+        .why h2 {
+            color: #ff5c9a;
+        }
+
+        .why-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .why-box {
+            width: 220px;
+
+            background: #222;
+
+            padding: 30px;
+
+            border-radius: 15px;
+        }
+
+        .why-box h3 {
+            color: #ff5c9a;
+            margin-bottom: 12px;
+        }
+
+        /* BOOKING */
+        .booking {
+            background: #fff8fb;
+        }
+
+        .booking-container {
+            max-width: 650px;
+
+            margin: auto;
+
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 15px;
+
+            box-shadow: 0 5px 25px rgba(0,0,0,.1);
+
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+
+            padding: 13px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 8px;
+
+            font-size: 16px;
+        }
+
+        textarea {
+            min-height: 110px;
+            resize: vertical;
+        }
+
+        .send-button {
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* CONTACT */
+        .contact {
+            background: #ffd6e8;
+        }
+
+        .contact p {
+            margin: 12px;
+            font-size: 18px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #111;
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+        }
+
+        footer span {
+            color: #ff5c9a;
+        }
+
+        /* WHATSAPP */
+        .whatsapp {
+            position: fixed;
+
+            bottom: 25px;
+            right: 25px;
+
+            background: #25D366;
+
+            color: white;
+
+            padding: 15px 20px;
+
+            border-radius: 40px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            box-shadow: 0 4px 15px rgba(0,0,0,.3);
+
+            z-index: 2000;
+        }
+
+        /* SIMU */
+        .success {
+            display: none;
+
+            margin-top: 20px;
+
+            padding: 15px;
+
+            background: #d4edda;
+
+            color: #155724;
+
+            border-radius: 8px;
+
+            text-align: center;
+        }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+
+            .home h2 {
+                font-size: 35px;
+            }
+
+            .home p {
+                font-size: 17px;
+            }
+
+            .service,
+            .gallery-item,
+            .why-box {
+                width: 100%;
+                max-width: 330px;
+            }
+
+            .booking-container {
+                padding: 25px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <h1>REY SOON SALUNI</h1>
+
+    <p>Uzuri • Kusuka • Kutengeneza Nywele</p>
+
+</header>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <a href="#nyumbani">Nyumbani</a>
+
+    <a href="#huduma">Huduma</a>
+
+    <a href="#picha">Picha</a>
+
+    <a href="#kuhusu">Kuhusu Sisi</a>
+
+    <a href="#booking">Weka Nafasi</a>
+
+    <a href="#mawasiliano">Mawasiliano</a>
+
+</nav>
+
+
+<!-- NYUMBANI -->
+
+<section class="home" id="nyumbani">
+
+    <div class="home-content">
+
+        <h2>
+            Karibu <span>Rey Soon Saluni</span>
+        </h2>
+
+        <p>
+            Tunakupa huduma bora za kusuka na
+            kutengeneza nywele kwa mitindo ya
+            kisasa na yenye kuvutia.
+        </p>
+
+        <a href="#huduma" class="button">
+            Angalia Huduma
+        </a>
+
+        <a href="#booking" class="button">
+            Weka Nafasi
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- KUHUSU SISI -->
+
+<section class="about" id="kuhusu">
+
+    <h2>Kuhusu Sisi</h2>
+
+    <p class="section-text">
+        Fahamu zaidi kuhusu Rey Soon Saluni
+    </p>
+
+    <p>
+
+        Karibu <b>Rey Soon Saluni</b>.
+
+        Tunatoa huduma mbalimbali za kusuka,
+        kutengeneza na kutunza nywele.
+
+        Tunazingatia usafi, ubora wa huduma,
+        ubunifu na mahitaji ya kila mteja.
+
+        Lengo letu ni kuhakikisha kila mteja
+        anapata huduma nzuri na kuondoka akiwa
+        ameridhika.
+
+    </p>
+
+</section>
+
+
+<!-- HUDUMA -->
+
+<section id="huduma">
+
+    <h2>Huduma Zetu</h2>
+
+    <p class="section-text">
+        Chagua huduma unayoipenda
+    </p>
+
+
+    <div class="services-container">
+
+
+        <div class="service">
+
+            <h3>Box Braids</h3>
+
+            <p>
+                Tunatengeneza Box Braids
+                kwa mitindo mbalimbali
+                kulingana na mahitaji yako.
+            </p>
+
+            <p class="price">
+                Bei: Wasiliana nasi
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <h3>Knotless Braids</h3>
+
+            <p>
+                Pata Knotless Braids
+                zenye mwonekano mzuri
+                na wa kisasa.
+            </p>
+
+            <p class="price">
+                Bei: Wasiliana nasi
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <h3>Cornrows</h3>
+
+            <p>
+                Tunatengeneza Cornrows
+                za kawaida na za kisasa.
+            </p>
+
+            <p class="price">
+                Bei: Wasiliana nasi
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <h3>Matunzo ya Nywele</h3>
+
+            <p>
+                Huduma ya kuosha,
+                kutunza na kufanya nywele
+                zako ziwe katika hali nzuri.
+            </p>
+
+            <p class="price">
+                Bei: Wasiliana nasi
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- PICHA -->
+
+<section id="picha">
+
+    <h2>Picha za Mitindo Yetu</h2>
+
+    <p class="section-text">
+        Hizi ni baadhi ya nywele tunazotengeneza.
+    </p>
+
+
+    <div class="gallery">
+
+
+        <div class="gallery-item">
+
+            <!-- WEKA PICHA YAKO HAPA -->
+
+            <img
+                src="Box Braids.jpg"
+                alt="Box Braids">
+
+            <h3>Box Braids</h3>
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <!-- WEKA PICHA YAKO HAPA -->
+
+            <img
+                src="Knotless Braids.jpg"
+                alt="Knotless Braids">
+
+            <h3>Knotless Braids</h3>
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <!-- WEKA PICHA YAKO HAPA -->
+
+            <img
+                src="Cornrows.jpg"
+                alt="Cornrows">
+
+            <h3>Cornrows</h3>
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <!-- WEKA PICHA YAKO HAPA -->
+
+            <img
+                src="Hair Style.jpg"
+                alt="Mitindo ya Nywele">
+
+            <h3>Mitindo Mingine</h3>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- KWA NINI SISI -->
+
+<section class="why">
+
+    <h2>Kwanini Utuchague?</h2>
+
+    <p class="section-text">
+        Tunajali uzuri na kuridhika kwa kila mteja.
+    </p>
+
+
+    <div class="why-container">
+
+
+        <div class="why-box">
+
+            <h3>Huduma Bora</h3>
+
+            <p>
+                Tunatoa huduma kwa umakini
+                na ubora.
+            </p>
+
+        </div>
+
+
+        <div class="why-box">
+
+            <h3>Huduma kwa Wateja</h3>
+
+            <p>
+                Tunawaheshimu na kuwajali
+                wateja wetu.
+            </p>
+
+        </div>
+
+
+        <div class="why-box">
+
+            <h3>Mitindo ya Kisasa</h3>
+
+            <p>
+                Tunatoa mitindo mbalimbali
+                kulingana na mahitaji yako.
+            </p>
+
+        </div>
+
+
+        <div class="why-box">
+
+            <h3>Kuweka Nafasi kwa Urahisi</h3>
+
+            <p>
+                Unaweza kuweka nafasi yako
+                kupitia WhatsApp.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- BOOKING -->
+
+<section class="booking" id="booking">
+
+    <h2>Weka Nafasi</h2>
+
+    <p class="section-text">
+        Jaza taarifa zako ili kuweka nafasi ya huduma.
+    </p>
+
+
+    <div class="booking-container">
+
+        <form id="bookingForm">
+
+
+            <div class="form-group">
+
+                <label>Jina Kamili</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Andika jina lako"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Namba ya Simu</label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Mfano: 0787999784"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Chagua Huduma</label>
+
+                <select id="service" required>
+
+                    <option value="">
+                        Chagua huduma
+                    </option>
+
+                    <option>
+                        Box Braids
+                    </option>
+
+                    <option>
+                        Knotless Braids
+                    </option>
+
+                    <option>
+                        Cornrows
+                    </option>
+
+                    <option>
+                        Matunzo ya Nywele
+                    </option>
+
+                    <option>
+                        Mtindo Mwingine
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Tarehe Unayopendelea</label>
+
+                <input
+                    type="date"
+                    id="date"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Ujumbe</label>
+
+                <textarea
+                    id="message"
+                    placeholder="Andika ujumbe au maelezo mengine...">
+                </textarea>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="button send-button">
+
+                Tuma Ombi la Nafasi
+
+            </button>
+
+
+            <div class="success" id="success">
+
+                Taarifa zako zimetumwa WhatsApp.
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- MAWASILIANO -->
+
+<section class="contact" id="mawasiliano">
+
+    <h2>Mawasiliano</h2>
+
+    <p>
+        📞 Simu: <b>0787999784</b>
+    </p>
+
+    <p>
+        💬 WhatsApp: <b>0787999784</b>
+    </p>
+
+    <p>
+        📧 Barua pepe: <b>charlesmalulu@gmail.com</b>
+    </p>
+
+    <p>
+        📍 Mahali: <b>GEITA, Tanzania</b>
+    </p>
+
+    <p>
+        🕒 Tunafungua: <b>Jumatatu - Jumamosi</b>
+    </p>
+
+
+    <br>
+
+
+    <a
+        href="tel:0787999784"
+        class="button">
+
+        Piga Simu
+
+    </a>
+
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+
+        © 2026
+        <span>Rey Soon Saluni</span>
+
+        - Haki zote zimehifadhiwa.
+
+    </p>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+
+<a
+    class="whatsapp"
+    href="#booking">
+
+    💬 Weka Nafasi
+
+</a>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+    const bookingForm =
+        document.getElementById("bookingForm");
+
+
+    bookingForm.addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+
+            let name =
+                document.getElementById("name").value;
+
+            let phone =
+                document.getElementById("phone").value;
+
+            let service =
+                document.getElementById("service").value;
+
+            let date =
+                document.getElementById("date").value;
+
+            let message =
+                document.getElementById("message").value;
+
+
+            /*
+                BADILISHA NAMBA HII
+                IWE NAMBA HALISI YA WHATSAPP
+                YA REY SOON SALUNI.
+
+                Mfano:
+                255787999784
+            */
+
+            let salonNumber =
+                "255787999784";
+
+
+            let whatsappMessage =
+
+`Habari Rey Soon Saluni,
+
+Ningependa kuweka nafasi ya huduma.
+
+Jina: ${name}
+
+Namba ya simu: ${phone}
+
+Huduma: ${service}
+
+Tarehe: ${date}
+
+Ujumbe: ${message}`;
+
+
+            let whatsappURL =
+
+                "https://wa.me/"
+                + salonNumber
+                + "?text="
+                + encodeURIComponent(
+                    whatsappMessage
+                );
+
+
+            window.open(
+                whatsappURL,
+                "_blank"
+            );
+
+
+            document.getElementById("success")
+                .style.display = "block";
+
+        }
+    );
+
+</script>
+
+
+</body>
+
+</html>
+```
